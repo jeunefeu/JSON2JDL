@@ -1,0 +1,39 @@
+-- @path MM1=/JSONTOJDL/Metamodels/JSON_metamodel.ecore
+-- @path MM2=/JSONTOJDL/Metamodels/JDL_metamodel.ecore
+
+module main;
+create OUT : MM2 from IN : MM1;
+
+rule JSON2application {
+
+	from src:MM1!JSON
+	
+	to target:MM2!Application (
+	
+		entity <- src.applicationName,
+		config <- src.JSON
+	)	
+}
+
+rule JSON2config {
+
+	from src:MM1!JSON
+	
+	to target:MM2!Config (
+	
+		baseName <- src.applicationName,
+        packageName <- src.packageName,
+        appType <- src.applicationType,
+        dataBaseType <- src.dataBaseType
+	)	
+}
+
+rule JSON2entity {
+
+	from src:MM1!JSON
+	
+	to target:MM2!Entity (
+	
+		baseName <- src.applicationName
+	)	
+}

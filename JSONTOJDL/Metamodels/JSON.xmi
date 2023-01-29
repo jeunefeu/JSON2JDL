@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JSON:JSON xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:JSON="www.w3.org/ns/json-ld"
+    xsi:schemaLocation="www.w3.org/ns/json-ld JSON_metamodel.ecore"
+    applicationType="monolithic"
+    databaseType="mongodb"
+    packageName="com.example"/>
